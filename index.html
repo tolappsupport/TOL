@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Топливные карты для бизнеса | Мобильное приложение</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стили для блока контактов в шапке */
+        .header-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: color 0.3s;
+            white-space: nowrap; /* Запрет переноса строк */
+        }
+        .header-contact:hover .contact-email {
+            color: #E6B800;
+        }
+        .contact-email {
+            font-weight: 700;
+            font-size: 14px; /* Уменьшен размер */
+            transition: color 0.3s;
+        }
+        .contact-subtext {
+            font-size: 10px; /* Уменьшен размер */
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-top: 1px;
+            letter-spacing: 0.2px;
+        }
+        
+        /* Стили для блока поддержки внизу страницы */
+        .support-section {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap; /* Запрет переноса строк */
+        }
+        .support-link {
+            font-size: 18px; /* Немного уменьшен */
+            font-weight: 800;
+            color: var(--text-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s;
+        }
+        .support-link:hover {
+            color: #b38f00; 
+        }
+        .support-text {
+            font-size: 13px; /* Немного уменьшен */
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Адаптив для мобильных */
+        @media (max-width: 900px) {
+            .header-contact {
+                display: none; 
+            }
+            .support-link {
+                font-size: 16px;
+            }
+        }
+        
+        /* Навигация: уменьшаем отступы, чтобы всё влезло */
+        .nav-links {
+            gap: 20px; 
+        }
+        .nav-links a {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Топливные <span>Карты</span></a>
+            
+            <div style="display: flex; align-items: center; gap: 25px;">
+                <div class="nav-links">
+                    <a href="index.html" class="active">Главная</a>
+                    <a href="index.html#features">Возможности</a>
+                    <a href="privacy.html">Политика конфиденциальности</a>
+                </div>
+                <!-- Блок контактов поддержки в шапке -->
+                <a href="mailto:tolappsupport@gmail.com" class="header-contact" title="Написать в службу поддержки">
+                    <span class="contact-email">✉ tolappsupport@gmail.com</span>
+                    <span class="contact-subtext">Служба поддержки приложения ТОЛ</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Онлайн оплата топлива и контроль лимитов</h1>
+                <p>Мобильное приложение для юридических лиц и корпоративных клиентов. Управляйте автопарком и расходами на топливо прямо со смартфона.</p>
+                <a href="#features" class="btn">Узнать больше</a>
+            </div>
+            <div class="hero-image">
+                <img src="card.png" alt="Топливная карта">
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="container">
+            <h2 class="section-title">Возможности приложения</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Оплата онлайн</h3>
+                    <p>Оплачивайте топливо онлайн, не выходя из автомобиля. Быстро, безопасно и удобно.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Поиск АЗС</h3>
+                    <p>Найдите удобную для заправки АЗС на карте и постройте оптимальный маршрут.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Актуальные цены</h3>
+                    <p>Получайте актуальную информацию о ценах на топливо на всех доступных станциях.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Контроль лимитов</h3>
+                    <p>Контролируйте остатки лимитов по карте в режиме реального времени онлайн.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Виртуальная карта</h3>
+                    <p>Зарегистрируйте виртуальную топливную карту. Выпуск по заявке в Личном кабинете.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Пластиковая карта</h3>
+                    <p>Возможность регистрации пластиковой карты активируется по заявке в Личном кабинете клиента.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Поддержка 24/7</h3>
+                    <p>Свяжитесь с центром информационной поддержки клиентов прямо из приложения.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="container">
+            <h2 class="section-title">Интерфейс приложения</h2>
+            <div class="gallery">
+                <img src="screen-map.png" alt="Карта АЗС">
+                <img src="screen-card.png" alt="Моя карта">
+                <img src="screen-login.png" alt="Вход в приложение">
+                <img src="screen-sms.png" alt="СМС код">
+                <img src="screen-support.png" alt="Поддержка">
+            </div>
+        </section>
+
+        <!-- Alert Section -->
+        <section class="container">
+            <div class="alert-box">
+                <h3>Важная информация</h3>
+                <p>Приложение не предназначено для физических лиц. Для работы необходима топливная карта, оформленная на юридическое лицо.</p>
+                
+                <!-- Блок поддержки внизу -->
+                <div class="support-section">
+                    <a href="mailto:tolappsupport@gmail.com" class="support-link">
+                        ✉ tolappsupport@gmail.com
+                    </a>
+                    <span class="support-text">Служба поддержки приложения ТОЛ</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="privacy.html" style="color: #FFD700; text-decoration: none;">Политика конфиденциальности</a></p>
+    </footer>
+
+</body>
+</html>
