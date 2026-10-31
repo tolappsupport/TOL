@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Топливные карты | Мобильное приложение ТОЛ</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- Стили для шапки и контактов --- */
+        .header-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: color 0.3s;
+            white-space: nowrap;
+        }
+        .header-contact:hover .contact-email {
+            color: #E6B800;
+        }
+        .contact-email {
+            font-weight: 700;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        .contact-subtext {
+            font-size: 10px;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-top: 1px;
+            letter-spacing: 0.2px;
+        }
+        
+        /* --- Навигация: уменьшаем отступы, чтобы всё влезло в одну строку --- */
+        .nav-links {
+            gap: 20px; 
+        }
+        .nav-links a {
+            font-size: 14px;
+        }
+
+        /* --- Дополнительные улучшения для карточек --- */
+        .feature-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        /* --- Адаптив для мобильных (ИСПРАВЛЕНО) --- */
+        @media (max-width: 900px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            .header-contact {
+                align-items: center; /* Выравниваем по центру на мобильном */
+            }
+            .nav-links {
+                display: none; /* Скрываем меню на мобильных */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Топливные <span>Карты</span></a>
+            
+            <div style="display: flex; align-items: center; gap: 25px;">
+                <div class="nav-links">
+                    <a href="index.html" class="active">Главная</a>
+                    <a href="#features">Возможности</a>
+                    <a href="#gallery">Интерфейс</a>
+                    <a href="privacy.html">Политика конфиденциальности</a>
+                </div>
+                <!-- Блок контактов поддержки в шапке -->
+                <a href="mailto:tolappsupport@gmail.com" class="header-contact" title="Написать в службу поддержки">
+                    <span class="contact-email">✉ tolappsupport@gmail.com</span>
+                    <span class="contact-subtext">Служба поддержки приложения ТОЛ</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Поиск АЗС, актуальные цены и контроль лимитов</h1>
+                <p>Мобильное приложение для управления расходами на топливо. Находите удобные заправки, отслеживайте цены на топливо, контролируйте остатки лимитов и стройте оптимальные маршруты до АЗС прямо со смартфона.</p>
+                <a href="#features" class="btn">Узнать больше</a>
+            </div>
+            <div class="hero-image">
+                <img src="card.png" alt="Топливная карта ТОЛ">
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="container">
+            <h2 class="section-title">Возможности приложения</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Оплата онлайн</h3>
+                    <p>Оплачивайте топливо онлайн, не выходя из автомобиля. Быстро, безопасно и удобно.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Поиск АЗС</h3>
+                    <p>Найдите удобную для заправки АЗС на карте и постройте оптимальный маршрут.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Актуальные цены</h3>
+                    <p>Получайте актуальную информацию о ценах на топливо на всех доступных станциях.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Контроль лимитов</h3>
+                    <p>Контролируйте остатки лимитов по карте в режиме реального времени онлайн.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Виртуальная карта</h3>
+                    <p>Зарегистрируйте виртуальную топливную карту. Выпуск по заявке в Личном кабинете.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Поддержка 24/7</h3>
+                    <p>Свяжитесь с центром информационной поддержки клиентов прямо из приложения.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="container">
+            <h2 class="section-title">Интерфейс приложения</h2>
+            <div class="gallery">
+                <img src="screen-map.png" alt="Карта АЗС">
+                <img src="screen-card.png" alt="Моя карта">
+                <img src="screen-login.png" alt="Вход в приложение">
+                <img src="screen-sms.png" alt="СМС код">
+                <img src="screen-support.png" alt="Поддержка">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="privacy.html" style="color: #FFD700; text-decoration: none;">Политика конфиденциальности</a></p>
+    </footer>
+
+</body>
+</html>
